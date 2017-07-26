@@ -1,9 +1,6 @@
 php-antispam
+
 ============
-
-[![Latest Stable Version](https://poser.pugx.org/cleantalk/php-antispam/v/stable.svg)](https://packagist.org/packages/cleantalk/php-antispam)
-
-A PHP API for antispam service cleantalk.org. Invisible protection from spam, no captches, no puzzles, no animals and no math.
 
 ## How API stops spam?
 API uses several simple tests to stop spammers.
@@ -16,13 +13,10 @@ API uses several simple tests to stop spammers.
 API sends a comment's text and several previous approved comments to the servers. Servers evaluates the relevance of the comment's text on the topic, tests on spam and finaly provides a solution - to publish or put on manual moderation of comments. If a comment is placed on manual moderation, the plugin adds to the text of a comment explaining the reason for the ban server publishing.
 
 ## Requirements
-
    * PHP 4.3 and above 
    * CURL support 
 
-
 ## Sample SPAM test for user signup
-
 ```php
 <?php
 
@@ -100,7 +94,6 @@ else
 ```
 
 ## Sample SPAM test for text comment
-
 ```php
 <?php
 
