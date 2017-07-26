@@ -44,17 +44,7 @@
  * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
  * DAMAGE.
- *
- * @category
- * @package     Services_JSON
- * @author      Michal Migurski <mike-json@teczno.com>
- * @author      Matt Knapp <mdknapp[at]gmail[dot]com>
- * @author      Brett Stimmerman <brettstimmerman[at]gmail[dot]com>
- * @copyright   2005 Michal Migurski
- * @version     CVS: $Id: JSON.php,v 1.31 2006/06/28 05:54:17 migurski Exp $
- * @license     http://www.opensource.org/licenses/bsd-license.php
- * @link        http://pear.php.net/pepr/pepr-proposal-show.php?id=198
- */
+
 
 /**
  * Marker constant for Services_JSON::decode(), used to flag stack state
@@ -130,6 +120,7 @@ class Services_JSON
     *                                   bubble up with an error, so all return values
     *                                   from encode() should be checked with isError()
     */
+   
     function Services_JSON($use = 0)
     {
         $this->use = $use;
@@ -175,7 +166,8 @@ class Services_JSON
                      . chr(0x80 | ($bytes & 0x3F));
         }
 
-        // ignoring UTF-32 for now, sorry
+           // ignoring UTF-32 for now, sorry
+       
         return '';
     }
 
@@ -190,6 +182,7 @@ class Services_JSON
     * @return   string  UTF-16 character
     * @access   private
     */
+   
     function utf82utf16($utf8)
     {
         // oh please oh please oh please oh please oh please
@@ -234,6 +227,7 @@ class Services_JSON
     * @return   mixed   JSON string representation of input var or an error if a problem occurs
     * @access   public
     */
+   
     function encode($var)
     {
         switch (gettype($var)) {
@@ -251,7 +245,9 @@ class Services_JSON
                 return (float) $var;
 
             case 'string':
-                // STRINGS ARE EXPECTED TO BE IN ASCII OR UTF-8 FORMAT
+              
+                  // STRINGS ARE EXPECTED TO BE IN ASCII OR UTF-8 FORMAT
+              
                 $ascii = '';
                 $strlen_var = strlen($var);
 
@@ -259,6 +255,7 @@ class Services_JSON
                 * Iterate over every character in the string,
                 * escaping with a slash or encoding to UTF-8 where necessary
                 */
+              
                 for ($c = 0; $c < $strlen_var; ++$c) {
 
                     $ord_var_c = ord($var{$c});
@@ -375,6 +372,7 @@ class Services_JSON
                 */
 
                 // treat as a JSON object
+              
                 if (is_array($var) && count($var) && (array_keys($var) !== range(0, sizeof($var) - 1))) {
                     $properties = array_map(array($this, 'name_value'),
                                             array_keys($var),
@@ -450,6 +448,7 @@ class Services_JSON
     * @return   string  string value stripped of comments and whitespace
     * @access   private
     */
+   
     function reduce_string($str)
     {
         $str = preg_replace(array(
