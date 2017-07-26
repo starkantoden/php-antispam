@@ -1,18 +1,4 @@
-<?php
 /**
- * Cleantalk base class
- *
- * @version 2.1.3
- * @package Cleantalk
- * @subpackage Base
- * @author Cleantalk team (welcome@cleantalk.org)
- * @copyright (C) 2014 CleanTalk team (http://cleantalk.org)
- * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
- * @see https://github.com/CleanTalk/php-antispam 
- *
- */
- 
- /**
 * Creating apache_request_headers() if not exists
 */
 if( !function_exists('apache_request_headers') ) {
