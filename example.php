@@ -1,23 +1,15 @@
 <?php
 
-/**
- * Cleantalk example
- *
- * @package Cleantalk Example
- * @copyright (C) 2011 - 2012 Сleantalk team (http://cleantalk.ru)
- * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
- * @see http://cleantalk.ru/wiki/doku.php/api
- *
-*/
-
 require_once (dirname(__FILE__) . '/cleantalk.class.php');
 
 // Take params from config
+
 $config_url = 'http://moderate.cleantalk.ru';
 $auth_key = null; // Set Cleantalk auth key
 
 
 // The facility in which to store the query parameters
+
 $ct_request = new CleantalkRequest();
 
 $ct_request->auth_key = $auth_key;
