@@ -2,13 +2,13 @@
 
 require_once (dirname(__FILE__) . '/cleantalk.class.php');
 
-// Take params from config
+    // Take params from config
 
 $config_url = 'http://moderate.cleantalk.ru';
-$auth_key = null; // Set Cleantalk auth key
+$auth_key = null;   // Set Cleantalk auth key
 
 
-// The facility in which to store the query parameters
+    // The facility in which to store the query parameters
 
 $ct_request = new CleantalkRequest();
 
@@ -25,7 +25,8 @@ $ct_request->submit_time = 12; # Seconds from start form filling till the form P
 $ct = new Cleantalk();
 $ct->server_url = $config_url;
 
-// Check
+    // Check
+
 $ct_result = $ct->isAllowMessage($ct_request);
 
 if ($ct_result->allow == 1) {
