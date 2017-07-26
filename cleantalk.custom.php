@@ -1,19 +1,3 @@
-<?php
-/**
- * CleanTalk anti-spam script for any web form 
- *
- * @version 1.1
- * @package CleanTalk
- * @subpackage Base
- * @author СleanTalk team (welcome@cleantalk.org)
- * @copyright (C) 2014 СleanTalk team (http://cleantalk.org)
- * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
- * @see https://github.com/CleanTalk/php-antispam 
- *
- */
-
-/*
-    CleanTalk's global vars
 */
 $ct_server_url = 'http://moderate.cleantalk.org/api2.0/';
 $ct_pagetime_label = 'ct_pagetime';
